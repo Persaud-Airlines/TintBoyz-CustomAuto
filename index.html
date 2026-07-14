@@ -1,361 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TintBoyz Custom Auto | Ride in Comfort</title>
-    <!-- Google Fonts: Bebas Neue (Vintage/Classic) and Inter (Modern/Clean) -->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
-    <style>
-        /* --- COLOR PALETTE & VARIABLES --- */
-        :root {
-            --matte-black: #0d0d0d;
-            --charcoal: #1a1a1a;
-            --candy-red: #d92027;
-            --red-hover: #b31a20;
-            --chrome: #f2f2f2;
-            --text-muted: #a0a0a0;
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1" id="wixDesktopViewport" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Wix.com Website Builder"/>
+
+  <link rel="icon" sizes="192x192" href="https://static.wixstatic.com/media/6ad660_f4d02b188ce042cba1eef64403713aaf~mv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/6ad660_f4d02b188ce042cba1eef64403713aaf~mv2.png" type="image/png"/>
+  <link rel="shortcut icon" href="https://static.wixstatic.com/media/6ad660_f4d02b188ce042cba1eef64403713aaf~mv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/6ad660_f4d02b188ce042cba1eef64403713aaf~mv2.png" type="image/png"/>
+  <link rel="apple-touch-icon" href="https://static.wixstatic.com/media/6ad660_f4d02b188ce042cba1eef64403713aaf~mv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/6ad660_f4d02b188ce042cba1eef64403713aaf~mv2.png" type="image/png"/>
+
+  <!-- Segmenter Polyfill -->
+  <script>
+    if (!window.Intl || !window.Intl.Segmenter) {
+      (function() {
+        var script = document.createElement('script');
+        script.src = 'https://static.parastorage.com/unpkg/@formatjs/intl-segmenter@11.7.10/polyfill.iife.js';
+        document.head.appendChild(script);
+      })();
+    }
+  </script>
+
+  <!-- Legacy Polyfills -->
+  <script nomodule="" src="https://static.parastorage.com/unpkg/core-js-bundle@3.2.1/minified.js"></script>
+  <script nomodule="" src="https://static.parastorage.com/unpkg/focus-within-polyfill@5.0.9/dist/focus-within-polyfill.js"></script>
+
+  <!-- Performance API Polyfills -->
+  <script>
+  (function () {
+    var noop = function noop() {};
+    if ("performance" in window === false) {
+      window.performance = {};
+    }
+    window.performance.mark = performance.mark || noop;
+    window.performance.measure = performance.measure || noop;
+    if ("now" in window.performance === false) {
+      var nowOffset = Date.now();
+      if (performance.timing && performance.timing.navigationStart) {
+        nowOffset = performance.timing.navigationStart;
+      }
+      window.performance.now = function now() {
+        return Date.now() - nowOffset;
+      };
+    }
+  })();
+  </script>
+
+  <!-- Essential Viewer Model -->
+  <script type="application/json" id="wix-essential-viewer-model">{"fleetConfig":{"fleetName":"thunderbolt-isolated-renderer","type":"GA","code":0},"mode":{"qa":false,"enableTestApi":false,"addAllServices":false,"debug":false,"ssrIndicator":false,"ssrOnly":false,"siteAssetsFallback":"enable","versionIndicator":false},"componentsLibrariesTopology":[{"artifactId":"editor-elements","namespace":"wixui","url":"https:\/\/static.parastorage.com\/services\/editor-elements\/1.15301.0"},{"artifactId":"editor-elements","namespace":"dsgnsys","url":"https:\/\/static.parastorage.com\/services\/editor-elements\/1.15301.0"}],"siteFeaturesConfigs":{"sessionManager":{"isRunningInDifferentSiteContext":false}},"language":{"userLanguage":"en"},"siteAssets":{"clientTopology":{"mediaRootUrl":"https:\/\/static.wixstatic.com","scriptsUrl":"static.parastorage.com","staticMediaUrl":"https:\/\/static.wixstatic.com\/media","staticAudioUrl":"https:\/\/music.wixstatic.com\/mp3","moduleRepoUrl":"https:\/\/static.parastorage.com\/unpkg","fileRepoUrl":"https:\/\/static.parastorage.com\/services","viewerAppsUrl":"https:\/\/viewer-apps.parastorage.com","viewerAssetsUrl":"https:\/\/viewer-assets.parastorage.com","siteAssetsUrl":"https:\/\/siteassets.parastorage.com","pageJsonServerUrls":["https:\/\/pages.parastorage.com","https:\/\/staticorigin.wixstatic.com","https:\/\/www.tintboyz.ca","https:\/\/fallback.wix.com\/wix-html-editor-pages-webapp\/page"],"pathOfTBModulesInFileRepoForFallback":"wix-thunderbolt\/dist\/"}},"siteFeatures":["accessibilityBrowserZoom","appMonitoring","assetsLoader","businessLogger","captcha","clickHandlerRegistrar","commonConfig","componentsRegistry","consentPolicy","contentReflow","cyclicTabbing","domSelectors","domStore","environmentWixCodeSdk","environment","locationWixCodeSdk","mpaNavigation","navigationManager","navigationPhases","ooi","pages","panorama","renderer","reporter","router","scrollRestoration","seoWixCodeSdk","seo","sessionManager","siteMembersWixCodeSdk","siteMembers","siteScrollBlocker","siteWixCodeSdk","speculationRules","ssrCache","stores","structureApi","thunderboltInitializer","tpaCommons","translations","usedPlatformApis","warmupData","windowMessageRegistrar","windowWixCodeSdk","wixEmbedsApi","componentsLoader","componentsReact","platform"],"site":{"externalBaseUrl":"https:\/\/www.tintboyz.ca","isSEO":false},"media":{"staticMediaUrl":"https:\/\/static.wixstatic.com\/media","mediaRootUrl":"https:\/\/static.wixstatic.com\/","staticVideoUrl":"https:\/\/video.wixstatic.com\/","userDomainMediaPrefixes":[]},"requestUrl":"https:\/\/www.tintboyz.ca\/gallery","rollout":{"siteAssetsVersionsRollout":false,"isDACRollout":0,"isTBRollout":false},"commonConfig":{"brand":"wix","host":"VIEWER","bsi":"","consentPolicy":{},"consentPolicyHeader":{},"siteRevision":"66","renderingFlow":"NONE","language":"en","locale":"en-us"},"interactionSampleRatio":0.01,"accessTokensUrl":"https:\/\/www.tintboyz.ca\/_api\/v1\/access-tokens","experiments":{"specs.thunderbolt.hardenFetchAndXHR":true,"specs.thunderbolt.securityExperiments":true,"specs.thunderbolt.allowWebpAvifTransforms":true,"specs.thunderbolt.browserCacheReload":true,"specs.thunderbolt.addIdAsClassName":true,"specs.thunderbolt.browserZoomMobileOnloadDetection":true}}</script>
+  <script>window.viewerModel = JSON.parse(document.getElementById('wix-essential-viewer-model').textContent)</script>
+
+  <!-- Globals Definitions -->
+  <script>
+    (function () {
+      var now = Date.now()
+      var activationStart = 0
+      try {
+        var navEntry = performance.getEntriesByType('navigation')[0];
+        if (navEntry && navEntry.activationStart > 0) {
+          activationStart = navEntry.activationStart;
         }
+      } catch (e) {}
+      window.initialTimestamps = {
+        initialTimestamp: now,
+        initialRequestTimestamp: Math.round(performance.timeOrigin ? performance.timeOrigin + activationStart : now - performance.now() + activationStart)
+      }
 
-        /* --- GLOBAL STYLES --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      window.thunderboltTag = "7be45c1ef913d24a9a976937aa88e130a8c51c7749f5a772f261e759"
+      window.thunderboltVersion = "7be45c1ef913d24a9a976937aa88e130a8c51c7749f5a772f261e759"
+    })();
+  </script>
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--matte-black);
-            color: var(--chrome);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+  <script>
+    window.commonConfig = viewerModel.commonConfig
+  </script>
 
-        h1, h2, h3, h4 {
-            font-family: 'Bebas Neue', sans-serif;
-            letter-spacing: 2px;
-            font-weight: normal;
-        }
+  <!-- handleAccessTokens bundle -->
+  <script data-url="https://static.parastorage.com/services/wix-thunderbolt/dist/handleAccessTokens.inline.3250797b.bundle.min.js">(()=>{"use strict";let e,t,r,o;var n={},i={};function l(e){var t=i[e];if(void 0!==t)return t.exports;var r=i[e]={exports:{}};return n[e](r,r.exports,l),r.exports}function a(e){let{context:t,property:r,value:o,enumerable:n=!0}=e,i=e.get,l=e.set;if(!r||void 0===o&&!i&&!l)return Error("property and value are required");let a=t||globalThis,s=a?.[r],u={};if(void 0!==o)u.value=o;else{if(i){let e=c(i);e&&(u.get=e)}if(l){let e=c(l);e&&(u.set=e)}}let p={...u,enumerable:n||!1,configurable:!1};void 0!==o&&(p.writable=!1);try{Object.defineProperty(a,r,p)}catch(e){return e instanceof TypeError?s:e}return s}function c(e,t){return"function"==typeof e?e:e?.async===!0&&"function"==typeof e.func?t?async function(t){return e.func(t)}:async function(){return e.func()}:"function"==typeof e?.func?e.func:void 0}l.rv=()=>"1.6.8",l.ruid="bundler=rspack@1.6.8";try{a({property:"strictDefine",value:a})}catch{}try{a({property:"defineStrictObject",value:function e(t){let{context:r,property:o,propertiesToExclude:n=[],skipPrototype:i=!1,hardenPrototypePropertiesToExclude:l=[]}=t;if(!o)return Error("property is required");let c=(r||globalThis)[o],p={},f=u(r,o);c&&("object"==typeof c||"function"==typeof c)&&Reflect.ownKeys(c).forEach(e=>{if(!n.includes(e)&&!s.includes(e)){let t=u(c,e);if(t&&(t.writable||t.configurable)){let{value:r,get:o,set:n,enumerable:i=!1}=t,l={};void 0!==r?l.value=r:o?l.get=o:n&&(l.set=n);try{let t=a({context:c,property:e,...l,enumerable:i});p[e]=t}catch(r){if(r instanceof TypeError)try{p[e]=t.value||t.get||t.set}catch{}else throw r}}}});let d={originalObject:c,originalProperties:p};if(!i&&c?.prototype!==void 0){let t=e({context:c,property:"prototype",propertiesToExclude:l,skipPrototype:!0});t instanceof Error||(d.originalPrototype=t?.originalObject,d.originalPrototypeProperties=t?.originalProperties)}return a({context:r,property:o,value:c,enumerable:f?.enumerable}),d}})}catch{}try{a({property:"defineStrictMethod",value:function(e,t){let r=(t||globalThis)[e],o=u(t||globalThis,e);return r&&o&&(o.writable||o.configurable)?(Object.freeze(r),a({context:globalThis,property:e,value:r})):r}})}catch{}var s=["toString","toLocaleString","valueOf","constructor","prototype"];function u(e,t){if(!(!e||!t))try{return Reflect.getOwnPropertyDescriptor(e,t)}catch{return}}function p(e){if("string"!=typeof e)return e;try{return decodeURIComponent(e).toLowerCase().trim()}catch{return e.toLowerCase().trim()}}function f(e,t){let r="";if("string"==typeof e)r=e.split("=")[0]?.trim()||"";else{if(!e||"string"!=typeof e.name)return!1;r=e.name}return t.has(p(r)||"")}function d(e,t){return("string"==typeof e?e.split(";").map(e=>e.trim()).filter(e=>e.length>0):e||[]).filter(e=>!f(e,t))}var y=null;function g(){return null===y&&(y=typeof Document>"u"?void 0:Object.getOwnPropertyDescriptor(Document.prototype,"cookie")),y}let b=(e,t)=>{try{let r=t?t.get.call(document):document.cookie;return r.split(";").map(e=>e.trim()).filter(t=>t?.startsWith(e))[0]?.split("=")[1]}catch(e){return""}},h=(e="",t="",r="/")=>`${e}=; ${t?`domain=${t};`:""} max-age=0; path=${r}; expires=Thu, 01 Jan 1970 00:00:01 GMT`;function m(e,t){try{return sessionStorage[e]("reload",t||"")}catch(e){console.error("ATS: Error calling sessionStorage:",e)}}var v=["true","b","c","new","enabled"];let w=[],S=(e,t)=>{let r;return w.includes(t)||!0===(r=e[t])||"string"==typeof r&&v.includes(r.toLowerCase())},T="client-session-bind",k="sec-fetch-unsupported",{experiments:x}=window.viewerModel,{cookie:E}=(e=new Set([T,"client-binding",k,"svSession","smSession","server-session-bind","wixSession2","wixSession3"].map(e=>e.toLowerCase())),a({context:document,property:"cookie",set:{func:t=>{var r,o;let n,i;return r=document,o=void 0,n=g(),i=p(t.split(";")[0]||"")||"",void([...e].every(e=>!i.startsWith(e.toLowerCase()))&&n?.set?n.set.call(r,t):o&&console.warn(o))}},get:{func:()=>(function(e,t){let r=g();if(!r?.get)throw Error("Cookie descriptor or getter not available");return d(r.get.call(e),t).join("; ")})(document,e)},enumerable:!0}),{cookieStore:function(e,t){if(!globalThis?.cookieStore)return;let r=globalThis.cookieStore.get.bind(globalThis.cookieStore),o=globalThis.cookieStore.getAll.bind(globalThis.cookieStore),n=globalThis.cookieStore.set.bind(globalThis.cookieStore),i=globalThis.cookieStore.delete.bind(globalThis.cookieStore);return a({context:globalThis.CookieStore.prototype,property:"get",value:async function(t){return f(("string"==typeof t?t:t.name)||"",e)?null:r.call(this,t)},enumerable:!0}),a({context:globalThis.CookieStore.prototype,property:"getAll",value:async function(){let t=await o.apply(this,Array.from(arguments));return d(t,e)},enumerable:!0}),a({context:globalThis.CookieStore.prototype,property:"set",value:async function(){let r=Array.from(arguments);if(!f(1===r.length?r[0].name:r[0],e))return n.apply(this,r);t&&console.warn(t)},enumerable:!0}),a({context:globalThis.CookieStore.prototype,property:"delete",value:async function(){let t=Array.from(arguments);if(!f(1===t.length?t[0].name:t[0],e))return i.apply(this,t)},enumerable:!0}),a({context:globalThis.cookieStore,property:"prototype",value:globalThis.CookieStore.prototype,enumerable:!1}),a({context:globalThis,property:"cookieStore",value:globalThis.cookieStore,enumerable:!0}),{get:r,getAll:o,set:n,delete:i}}(e,void 0),cookie:g()}),P="tbReady",C="security_overrideGlobals",{experiments:D,siteFeaturesConfigs:M,accessTokensUrl:O}=window.viewerModel,$={},j=(t=b(T,E),S(x,"specs.thunderbolt.browserCacheReload")&&(b(k,E)||t?m("removeItem"):function(){if("undefined"!=typeof window){let e=performance.getEntriesByType("navigation")[0];return"back_forward"===(e?.type||"")}return!1}()&&function(){let{counter:e}=function(){let e=m("getItem");if(e){let[t,r]=e.split("-"),o=r?parseInt(r,10):0;if(o>=3){let e=t?Number(t):0;if(Date.now()-e>6e4)return{counter:0}}return{counter:o}}return{counter:0}}();e<3?(function(e=1){m("setItem",`${Date.now()}-${e}`)}(e+1),window.location.reload()):console.error("ATS: Max reload attempts reached")}()),r=h(T),o=h(T,location.hostname),E.set.call(document,r),E.set.call(document,o),t);j&&($["client-binding"]=j);let A=fetch;addEventListener(P,function e(t){let{logger:r}=t.detail;try{window.tb.init({fetch:A,fetchHeaders:$})}catch(t){let e=Error("TB003");r.meter(`${C}_${e.message}`,{paramsOverrides:{errorType:C,eventString:e.message}}),window?.viewerModel?.mode.debug&&console.error(t)}finally{removeEventListener(P,e)}}),S(D,"specs.thunderbolt.hardenFetchAndXHR")||(window.fetchDynamicModel=()=>M.sessionManager.isRunningInDifferentSiteContext?Promise.resolve({}):fetch((()=>{try{let e="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope,t=globalThis?.parent!==globalThis,r=new URL(O,location.href);return(t||e)&&(r.searchParams.set("ifr",String(t)),r.searchParams.set("worker",String(e))),r.href}catch{return O}})(),{credentials:"same-origin",headers:$}).then(function(e){if(!e.ok)throw Error(`[${e.status}]${e.statusText}`);return e.json()}),window.dynamicModelPromise=window.fetchDynamicModel())})();</script>
 
-        a { text-decoration: none; color: inherit; }
+  <!-- overrideGlobals bundle -->
+  <script data-url="https://static.parastorage.com/services/wix-thunderbolt/dist/overrideGlobals.inline.b271af7d.bundle.min.js">(()=>{"use strict";var e={},t={};function r(o){var n=t[o];if(void 0!==n)return n.exports;var i=t[o]={exports:{}};return e[o](i,i.exports,r),i.exports}function o(e){let{context:t,property:r,value:o,enumerable:i=!0}=e,c=e.get,a=e.set;if(!r||void 0===o&&!c&&!a)return Error("property and value are required");let l=t||globalThis,s=l?.[r],u={};if(void 0!==o)u.value=o;else{if(c){let e=n(c);e&&(u.get=e)}if(a){let e=n(a);e&&(u.set=e)}}let p={...u,enumerable:i||!1,configurable:!1};void 0!==o&&(p.writable=!1);try{Object.defineProperty(l,r,p)}catch(e){return e instanceof TypeError?s:e}return s}function n(e,t){return"function"==typeof e?e:e?.async===!0&&"function"==typeof e.func?t?async function(t){return e.func(t)}:async function(){return e.func()}:"function"==typeof e?.func?e.func:void 0}r.rv=()=>"1.6.8",r.ruid="bundler=rspack@1.6.8";try{o({property:"strictDefine",value:o})}catch{}try{o({property:"defineStrictObject",value:c})}catch{}try{o({property:"defineStrictMethod",value:a})}catch{}var i=["toString","toLocaleString","valueOf","constructor","prototype"];function c(e){let{context:t,property:r,propertiesToExclude:n=[],skipPrototype:a=!1,hardenPrototypePropertiesToExclude:s=[]}=e;if(!r)return Error("property is required");let u=(t||globalThis)[r],p={},f=l(t,r);u&&("object"==typeof u||"function"==typeof u)&&Reflect.ownKeys(u).forEach(e=>{if(!n.includes(e)&&!i.includes(e)){let t=l(u,e);if(t&&(t.writable||t.configurable)){let{value:r,get:n,set:i,enumerable:c=!1}=t,a={};void 0!==r?a.value=r:n?a.get=n:i&&(a.set=i);try{let t=o({context:u,property:e,...a,enumerable:c});p[e]=t}catch(r){if(r instanceof TypeError)try{p[e]=t.value||t.get||t.set}catch{}else throw r}}}});let d={originalObject:u,originalProperties:p};if(!a&&u?.prototype!==void 0){let e=c({context:u,property:"prototype",propertiesToExclude:s,skipPrototype:!0});e instanceof Error||(d.originalPrototype=e?.originalObject,d.originalPrototypeProperties=e?.originalProperties)}return o({context:t,property:r,value:u,enumerable:f?.enumerable}),d}function a(e,t){let r=(t||globalThis)[e],n=l(t||globalThis,e);return r&&n&&(n.writable||n.configurable)?(Object.freeze(r),o({context:globalThis,property:e,value:r})):r}function l(e,t){if(!(!e||!t))try{return Reflect.getOwnPropertyDescriptor(e,t)}catch{return}}function s(e){return e.startsWith("//")&&/(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]/g.test(`${location.protocol}:${e}`)&&(e=`${location.protocol}${e}`),!e.startsWith("http")||new URL(e).hostname===location.hostname}function u(e){if("string"!=typeof e)return e;try{return decodeURIComponent(e).toLowerCase().trim()}catch{return e.toLowerCase().trim()}}function p(e,t){return e instanceof Headers?e.forEach((r,o)=>{f(o,t)||e.delete(o)}):Object.keys(e).forEach(r=>{f(r,t)||delete e[r]}),e}function f(e,t){return!t.has(u(e)||"")}function d(e,t){let r=!0,o=u(function(e){let t,r;if(globalThis.Request&&e instanceof Request)t=e.url;else if("function"==typeof e?.toString)t=e.toString();else throw Error("Unsupported type for url");try{return new URL(t).pathname}catch{return(r=t.replace(/#.+/gi,"").split("?").shift()).startsWith("/")?r:`/${r}`}}(e));return o&&t.some(e=>o.includes(e))&&(r=!1),r}var y=["true","b","c","new","enabled"];let b=[],g=(e,t)=>{let r;return b.includes(t)||!0===(r=e[t])||"string"==typeof r&&y.includes(r.toLowerCase())};performance.mark("overrideGlobals started");let{experiments:m}=window.viewerModel,v=g(m,"specs.thunderbolt.securityExperiments");try{let e,t;!function(){let e=globalThis.open,t=document.open;function r(t,r,o){let n="string"!=typeof t,i=e.call(window,t,r,o);return n||t&&s(t)?{}:i}o({property:"open",value:r,context:globalThis,enumerable:!0}),o({property:"open",value:function(e,o,n){return e?r(e,o,n):t.call(document,e||"",o||"",n||"")},context:document,enumerable:!0})}(),v&&function(){let e=document.createElement,t=Element.prototype.setAttribute,r=Element.prototype.setAttributeNS,n=Element.prototype.removeAttribute,i=(Object.getOwnPropertyDescriptor(HTMLIFrameElement.prototype,"contentWindow")?.get,Object.getOwnPropertyDescriptor(HTMLIFrameElement.prototype,"src")),c=i?.get,a=i?.set,l=Object.getOwnPropertyDescriptor(HTMLIFrameElement.prototype,"sandbox")?.get,s=DOMTokenList.prototype.add,p=DOMTokenList.prototype.remove,f=DOMTokenList.prototype.toggle,d=DOMTokenList.prototype.replace,y=Object.getOwnPropertyDescriptor(DOMTokenList.prototype,"value"),b=y?.get,g=y?.set,m=new WeakSet;o({property:"createElement",context:document,value:function(n,i){let c=e.call(document,n,i);return"iframe"===u(n)&&(o({property:"srcdoc",context:c,get:()=>"",set:()=>{console.warn("`srcdoc` is not allowed in iframe elements.")}}),o({property:"setAttribute",context:c,value:function(e,r){if("srcdoc"===e.toLowerCase())return void console.warn("`srcdoc` attribute is not allowed to be set.");t.call(c,e,r);e.toLowerCase()},enumerable:!1}),o({property:"setAttributeNS",context:c,value:function(e,t,o){if("srcdoc"===t.toLowerCase())return void console.warn("`srcdoc` attribute is not allowed to be set.");r.call(c,e,t,o);t.toLowerCase()},enumerable:!1})),c},enumerable:!0})}(),g(m,"specs.thunderbolt.hardenFetchAndXHR")&&v&&function(e,t,r){let n=fetch,i=XMLHttpRequest,c=new Set(t);function a(){let t=new i,o=t.open,n=t.setRequestHeader;return t.open=function(){let n=Array.from(arguments),i=n[1];if(n.length<2||d(i,e))return o.apply(t,n);throw Error(r||`Request not allowed for path ${i}`)},t.setRequestHeader=function(e,r){f(decodeURIComponent(e),c)&&n.call(t,e,r)},t}o({property:"fetch",value:function(){var t;let o=(t=arguments,globalThis.Request&&t[0]instanceof Request&&t[0]?.headers?p(t[0].headers,c):t[1]?.headers&&p(t[1].headers,c),t);return d(arguments[0],e)?n.apply(globalThis,Array.from(o)):new Promise((e,t)=>{let o=Error(r||`Request not allowed for path ${arguments[0]}`);t(o)})},enumerable:!0}),o({property:"XMLHttpRequest",value:a,enumerable:!0}),Object.keys(i).forEach(e=>{a[e]=i[e]})}(["/_api/v1/access-tokens","/_api/v2/dynamicmodel","/_api/one-app-session-web/v3/businesses"],["client-binding"]),function(){if(navigator&&"serviceWorker"in navigator)navigator.serviceWorker.register,o({context:navigator.serviceWorker,property:"register",value:function(){console.log("Service worker registration is not allowed")},enumerable:!0})}(),e=[],t=(t=[]).concat(["TextEncoder","TextDecoder"]),v&&(t=t.concat(["XMLHttpRequestEventTarget","EventTarget"])),t=t.concat(["URL","JSON"]),v&&(e=e.concat(["addEventListener","removeEventListener"])),e=e.concat(["encodeURI","encodeURIComponent","decodeURI","decodeURIComponent"]),t=t.concat(["String","Number"]),v&&t.push("Object"),t=t.concat(["Reflect"]),e.forEach(e=>{a(e),["addEventListener","removeEventListener"].includes(e)&&a(e,document)}),t.forEach(e=>{c({property:e})}),v&&function(){return e("setTimeout",0,globalThis),e("setInterval",0,globalThis);function e(e,t,r){let n=r||globalThis,i=n[e];if(!i||"function"!=typeof i)throw Error(`Function ${e} not found or is not a function`);o({property:e,value:function(){let r=Array.from(arguments);if("string"!=typeof r[t])return i.apply(n,r);console.warn(`Calling ${e} with a String Argument at index ${t} is not allowed`)},context:r,enumerable:!0})}}()}catch(t){window?.viewerModel?.mode.debug&&console.error(t);let e=Error("TB006");window.fedops?.reportError(e,"security_overrideGlobals"),window.Sentry?window.Sentry.captureException(e):globalThis.defineStrictProperty("sentryBuffer",[e],window,!1)}performance.mark("overrideGlobals ended")})();</script>
 
-        /* --- BUTTONS --- */
-        .btn {
-            display: inline-block;
-            background-color: var(--candy-red);
-            color: #fff;
-            padding: 14px 30px;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+  <!-- Custom CSS matching the brand images provided -->
+  <style>
+    :root {
+      --brand-blue: #003087;
+      --brand-red: #D50000;
+      --text-dark: #001A4E;
+    }
 
-        .btn:hover {
-            background-color: var(--red-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(217, 32, 39, 0.4);
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        /* --- HEADER & NAVIGATION --- */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(13, 13, 13, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            border-bottom: 1px solid #333;
-        }
+    body {
+      background-color: #ffffff;
+      color: var(--text-dark);
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
 
-        .logo {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2.2rem;
-            color: var(--chrome);
-        }
+    /* Top Left Slash Accents */
+    .top-left-slashes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 180px;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 5;
+    }
+    .top-left-slashes::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      left: -80px;
+      width: 140px;
+      height: 300px;
+      background: var(--brand-blue);
+      transform: rotate(35deg);
+    }
 
-        .logo span {
-            color: var(--candy-red);
-        }
+    /* Bottom Right Slash Accents */
+    .bottom-right-slashes {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 320px;
+      height: 280px;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 5;
+    }
+    .bottom-right-slashes::before {
+      content: "";
+      position: absolute;
+      bottom: -40px;
+      right: -80px;
+      width: 180px;
+      height: 400px;
+      background: var(--brand-blue);
+      transform: rotate(35deg);
+    }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
+    /* Main Branding Header Container */
+    .brand-header {
+      text-align: center;
+      padding: 25px 10px 15px;
+      position: relative;
+      z-index: 10;
+    }
+    .brand-title {
+      color: var(--brand-red);
+      font-weight: 900;
+      font-style: italic;
+      font-size: 36px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+    .brand-subtitle {
+      color: var(--brand-blue);
+      font-weight: bold;
+      font-style: italic;
+      font-size: 18px;
+      margin-top: 4px;
+    }
 
-        nav ul li a {
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s;
-        }
+    /* Full-width Red Banner bar */
+    .red-banner-line {
+      height: 10px;
+      background-color: var(--brand-red);
+      width: 100%;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 4;
+    }
 
-        nav ul li a:hover { color: var(--candy-red); }
+    /* Content Area */
+    .main-content {
+      flex: 1;
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
 
-        /* --- HERO SECTION --- */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=2000') center/cover;
-            padding: 0 20px;
-            margin-top: 60px; /* Offset for fixed header */
-        }
+    /* Zebra / Striped Section Divider */
+    .striped-divider {
+      height: 18px;
+      background: repeating-linear-gradient(
+        -45deg,
+        var(--brand-blue),
+        var(--brand-blue) 4px,
+        transparent 4px,
+        transparent 12px
+      );
+      width: 100%;
+      margin: 25px 0;
+    }
 
-        .hero h1 {
-            font-size: 5rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-        }
+    /* Center Alert Box */
+    .maintenance-message {
+      font-size: 22px;
+      font-weight: bold;
+      color: var(--brand-red);
+      margin: 30px 0;
+      line-height: 1.4;
+    }
 
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin-bottom: 30px;
-            color: var(--chrome);
-            font-weight: 300;
-        }
+    /* Horizontal Section Title Layout */
+    .section-title-wrap {
+      display: inline-block;
+      background-color: var(--brand-blue);
+      color: #fff;
+      padding: 6px 30px;
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 30px;
+      box-shadow: -4px 4px 0px var(--brand-red);
+    }
 
-        .price-badge {
-            display: inline-block;
-            background: transparent;
-            border: 2px solid var(--chrome);
-            padding: 8px 15px;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            transform: rotate(-3deg);
-        }
+    /* Contact Block Styling */
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      text-align: left;
+      margin-top: 20px;
+    }
 
-        /* --- SERVICES SECTION --- */
-        .services {
-            padding: 80px 5%;
-            background-color: var(--charcoal);
-            text-align: center;
-        }
+    /* Red highlight card layout for address info */
+    .address-highlight-box {
+      background-color: var(--brand-red);
+      color: #ffffff;
+      padding: 25px;
+      border-radius: 2px;
+    }
+    .address-header {
+      font-weight: bold;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: 6px;
+    }
+    .address-text {
+      font-size: 14px;
+      line-height: 1.6;
+    }
 
-        .section-title {
-            font-size: 3.5rem;
-            margin-bottom: 50px;
-        }
+    /* Clean structural grid for standard communication items */
+    .info-group {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      padding-left: 10px;
+    }
+    .info-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .info-header {
+      color: var(--brand-red);
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .info-star {
+      color: var(--brand-blue);
+      font-size: 22px;
+      line-height: 1;
+    }
+    .info-value {
+      font-size: 16px;
+      color: var(--brand-blue);
+      font-weight: 500;
+    }
+    .info-value a {
+      color: var(--brand-blue);
+      text-decoration: none;
+    }
+    .info-value a:hover {
+      text-decoration: underline;
+    }
 
-        .section-title span { color: var(--candy-red); }
+    /* Footer Credits styling */
+    .footer-credits {
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 11px;
+      color: var(--brand-blue);
+      font-weight: bold;
+      position: relative;
+      z-index: 10;
+      border-top: 1px solid #eeeeee;
+      width: 100%;
+    }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background-color: var(--matte-black);
-            padding: 40px 20px;
-            border-top: 3px solid var(--candy-red);
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover { transform: translateY(-10px); }
-
-        .service-card h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        .service-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* --- HERITAGE SECTION --- */
-        .heritage {
-            padding: 80px 5%;
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            background-color: var(--matte-black);
-        }
-
-        .heritage-img {
-            flex: 1;
-            height: 400px;
-            background: url('https://images.unsplash.com/photo-1598460621313-f938b82ff630?auto=format&fit=crop&q=80&w=1000') center/cover;
-            border-radius: 4px;
-            filter: grayscale(80%);
-            box-shadow: -15px 15px 0px var(--candy-red);
-        }
-
-        .heritage-text { flex: 1; }
-
-        .heritage-text h2 { font-size: 3.5rem; margin-bottom: 20px; }
-
-        .heritage-text p {
-            margin-bottom: 20px;
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
-
-        /* --- MOBILE PICKUP STEPS --- */
-        .pickup {
-            padding: 80px 5%;
-            background-color: var(--charcoal);
-            text-align: center;
-        }
-
-        .steps-container {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
-
-        .step {
-            flex: 1;
-            min-width: 200px;
-            max-width: 300px;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background-color: var(--candy-red);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2rem;
-            margin: 0 auto 20px;
-        }
-
-        .step h4 { font-size: 1.8rem; margin-bottom: 10px; }
-        .step p { color: var(--text-muted); font-size: 0.9rem; }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: #000;
-            padding: 40px 5%;
-            text-align: center;
-            border-top: 1px solid #333;
-        }
-
-        footer p { color: var(--text-muted); font-size: 0.9rem; margin-top: 20px; }
-
-        /* --- RESPONSIVE DESIGN --- */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 3.5rem; }
-            nav ul { display: none; } /* Simplified for mobile, would need a hamburger menu in production */
-            .heritage { flex-direction: column; }
-            .heritage-img { width: 100%; box-shadow: none; border-left: 5px solid var(--candy-red); }
-        }
-    </style>
+    @media (max-width: 600px) {
+      .top-left-slashes, .bottom-right-slashes {
+        display: none;
+      }
+      .brand-title {
+        font-size: 28px;
+      }
+      .maintenance-message {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="logo">TINT<span>BOYZ</span></div>
-        <nav>
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#heritage">About Us</a></li>
-                <li><a href="#pickup">Mobile Pickup</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#" class="btn" style="padding: 10px 20px; font-size: 1rem;">Book Now</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Diagonal Theme Edge Accents -->
+  <div class="top-left-slashes"></div>
+  <div class="bottom-right-slashes"></div>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <h1>Ride In <span>Comfort</span></h1>
-        <div class="price-badge">Starting As Low As $99</div>
-        <p>Classic craftsmanship meets modern precision. For all your car tinting, detailing, and accessory needs in Niagara & Hamilton.</p>
-        <a href="#services" class="btn">Get a Free Quote</a>
-    </section>
+  <!-- Main Website Branding -->
+  <div class="brand-header">
+    <div class="brand-title">Tint Boyz</div>
+    <div class="brand-subtitle">Custom Auto</div>
+  </div>
 
-    <!-- SERVICES SECTION -->
-    <section id="services" class="services">
-        <h2 class="section-title">Our <span>Services</span></h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Auto Tinting</h3>
-                <p>Premium films providing UV protection, heat rejection, and ultimate privacy. Be in and out within the hour.</p>
-            </div>
-            <div class="service-card">
-                <h3>Pro Detailing</h3>
-                <p>Restore your ride's showroom shine. Inside and out, we treat every vehicle like a classic.</p>
-            </div>
-            <div class="service-card">
-                <h3>Alarms & Starters</h3>
-                <p>Modernize your security. Custom car alarms and remote start installations to keep your ride safe and ready.</p>
-            </div>
-            <div class="service-card">
-                <h3>Custom Accessories</h3>
-                <p>From lighting to audio. We install the upgrades that make your car uniquely yours.</p>
-            </div>
+  <!-- Accent Divider Layout Line -->
+  <div class="red-banner-line"></div>
+
+  <!-- Core Content Layout -->
+  <div class="main-content">
+    
+    <div class="striped-divider"></div>
+    
+    <!-- User Requested Maintenance Message -->
+    <div class="maintenance-message">
+      This website is undergoing maintence currently
+    </div>
+    
+    <div class="striped-divider"></div>
+
+    <div class="section-title-wrap">
+      Hours & Locations
+    </div>
+
+    <!-- Info & Contact Details -->
+    <div class="contact-container">
+      
+      <!-- Styled Red Location block matching the visual reference -->
+      <div class="address-highlight-box">
+        <div class="address-header">
+          <span style="color:#fff;">★</span> ADDRESS <span style="color:#fff;">★</span>
         </div>
-    </section>
-
-    <!-- HERITAGE SECTION -->
-    <section id="heritage" class="heritage">
-        <div class="heritage-img"></div>
-        <div class="heritage-text">
-            <h2>35 Years of <span>Mastery</span></h2>
-            <p>With over three decades of experience, TintBoyz Custom Auto delivers the best automotive service money can buy. We combine old-school garage work ethic with modern technology to ensure flawless results every single time.</p>
-            <p>You can't go wrong with TintBoyz. We respect your ride, your time, and your budget.</p>
-            <a href="#" class="btn" style="margin-top: 15px;">View Our Gallery</a>
+        <div class="address-text">
+          2345 Barton Street East<br>
+          Hamilton, ON<br>
+          L8E 2W8
         </div>
-    </section>
-
-    <!-- MOBILE PICKUP SECTION -->
-    <section id="pickup" class="pickup">
-        <h2 class="section-title">Niagara Mobile <span>Pick Up</span></h2>
-        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Don't have time to wait at the shop? Take advantage of our premier mobile pick-up service.</p>
         
-        <div class="steps-container">
-            <div class="step">
-                <div class="step-number">1</div>
-                <h4>We Pick It Up</h4>
-                <p>We come to your home or office in the Niagara region and securely pick up your vehicle.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <h4>We Upgrade It</h4>
-                <p>Your car gets the premium TintBoyz treatment at our secure facility.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <h4>We Return It</h4>
-                <p>Your upgraded, comfortable ride is delivered right back to your door.</p>
-            </div>
+        <div class="address-header" style="margin-top: 20px;">
+          <span style="color:#fff;">★</span> REGION <span style="color:#fff;">★</span>
         </div>
-    </section>
+        <div class="address-text">
+          Lincoln, Ontario, Canada
+        </div>
+      </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="logo" style="font-size: 1.8rem; margin-bottom: 10px;">TINT<span>BOYZ</span> Custom Auto</div>
-        <p>Serving Niagara & Hamilton</p>
-        <p>&copy; 2026 by TINTBOYZ. All rights reserved.</p>
-    </footer>
+      <!-- Styled Mail and Phone Elements matching the footer elements -->
+      <div class="info-group">
+        
+        <!-- Mail Block -->
+        <div class="info-item">
+          <div class="info-header">
+            <span class="info-star">★</span> Mail
+          </div>
+          <div class="info-value">
+            <a href="mailto:tintboyzcustomauto@gmail.com">tintboyzcustomauto@gmail.com</a>
+          </div>
+        </div>
+
+        <!-- Phone Block -->
+        <div class="info-item">
+          <div class="info-header">
+            <span class="info-star">★</span> Phone
+          </div>
+          <div class="info-value">
+            <a href="tel:9059718468">905-971-8468</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Copyright Footer line -->
+  <div class="footer-credits">
+    © 2026 BY TINTBOYZ
+  </div>
 
 </body>
 </html>
