@@ -1,416 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset='utf-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1" id="wixDesktopViewport" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Wix.com Website Builder"/>
-
-  <link rel="icon" sizes="192x192" href="https://static.wixstatic.com/media/6ad660_f4d02b188ce042cba1eef64403713aaf~mv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/6ad660_f4d02b188ce042cba1eef64403713aaf~mv2.png" type="image/png"/>
-  <link rel="shortcut icon" href="https://static.wixstatic.com/media/6ad660_f4d02b188ce042cba1eef64403713aaf~mv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/6ad660_f4d02b188ce042cba1eef64403713aaf~mv2.png" type="image/png"/>
-  <link rel="apple-touch-icon" href="https://static.wixstatic.com/media/6ad660_f4d02b188ce042cba1eef64403713aaf~mv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/6ad660_f4d02b188ce042cba1eef64403713aaf~mv2.png" type="image/png"/>
-
-  <!-- Segmenter Polyfill -->
-  <script>
-    if (!window.Intl || !window.Intl.Segmenter) {
-      (function() {
-        var script = document.createElement('script');
-        script.src = 'https://static.parastorage.com/unpkg/@formatjs/intl-segmenter@11.7.10/polyfill.iife.js';
-        document.head.appendChild(script);
-      })();
-    }
-  </script>
-
-  <!-- Legacy Polyfills -->
-  <script nomodule="" src="https://static.parastorage.com/unpkg/core-js-bundle@3.2.1/minified.js"></script>
-  <script nomodule="" src="https://static.parastorage.com/unpkg/focus-within-polyfill@5.0.9/dist/focus-within-polyfill.js"></script>
-
-  <!-- Performance API Polyfills -->
-  <script>
-  (function () {
-    var noop = function noop() {};
-    if ("performance" in window === false) {
-      window.performance = {};
-    }
-    window.performance.mark = performance.mark || noop;
-    window.performance.measure = performance.measure || noop;
-    if ("now" in window.performance === false) {
-      var nowOffset = Date.now();
-      if (performance.timing && performance.timing.navigationStart) {
-        nowOffset = performance.timing.navigationStart;
-      }
-      window.performance.now = function now() {
-        return Date.now() - nowOffset;
-      };
-    }
-  })();
-  </script>
-
-  <!-- Essential Viewer Model -->
-  <script type="application/json" id="wix-essential-viewer-model">{"fleetConfig":{"fleetName":"thunderbolt-isolated-renderer","type":"GA","code":0},"mode":{"qa":false,"enableTestApi":false,"addAllServices":false,"debug":false,"ssrIndicator":false,"ssrOnly":false,"siteAssetsFallback":"enable","versionIndicator":false},"componentsLibrariesTopology":[{"artifactId":"editor-elements","namespace":"wixui","url":"https:\/\/static.parastorage.com\/services\/editor-elements\/1.15301.0"},{"artifactId":"editor-elements","namespace":"dsgnsys","url":"https:\/\/static.parastorage.com\/services\/editor-elements\/1.15301.0"}],"siteFeaturesConfigs":{"sessionManager":{"isRunningInDifferentSiteContext":false}},"language":{"userLanguage":"en"},"siteAssets":{"clientTopology":{"mediaRootUrl":"https:\/\/static.wixstatic.com","scriptsUrl":"static.parastorage.com","staticMediaUrl":"https:\/\/static.wixstatic.com\/media","staticAudioUrl":"https:\/\/music.wixstatic.com\/mp3","moduleRepoUrl":"https:\/\/static.parastorage.com\/unpkg","fileRepoUrl":"https:\/\/static.parastorage.com\/services","viewerAppsUrl":"https:\/\/viewer-apps.parastorage.com","viewerAssetsUrl":"https:\/\/viewer-assets.parastorage.com","siteAssetsUrl":"https:\/\/siteassets.parastorage.com","pageJsonServerUrls":["https:\/\/pages.parastorage.com","https:\/\/staticorigin.wixstatic.com","https:\/\/www.tintboyz.ca","https:\/\/fallback.wix.com\/wix-html-editor-pages-webapp\/page"],"pathOfTBModulesInFileRepoForFallback":"wix-thunderbolt\/dist\/"}},"siteFeatures":["accessibilityBrowserZoom","appMonitoring","assetsLoader","businessLogger","captcha","clickHandlerRegistrar","commonConfig","componentsRegistry","consentPolicy","contentReflow","cyclicTabbing","domSelectors","domStore","environmentWixCodeSdk","environment","locationWixCodeSdk","mpaNavigation","navigationManager","navigationPhases","ooi","pages","panorama","renderer","reporter","router","scrollRestoration","seoWixCodeSdk","seo","sessionManager","siteMembersWixCodeSdk","siteMembers","siteScrollBlocker","siteWixCodeSdk","speculationRules","ssrCache","stores","structureApi","thunderboltInitializer","tpaCommons","translations","usedPlatformApis","warmupData","windowMessageRegistrar","windowWixCodeSdk","wixEmbedsApi","componentsLoader","componentsReact","platform"],"site":{"externalBaseUrl":"https:\/\/www.tintboyz.ca","isSEO":false},"media":{"staticMediaUrl":"https:\/\/static.wixstatic.com\/media","mediaRootUrl":"https:\/\/static.wixstatic.com\/","staticVideoUrl":"https:\/\/video.wixstatic.com\/","userDomainMediaPrefixes":[]},"requestUrl":"https:\/\/www.tintboyz.ca\/gallery","rollout":{"siteAssetsVersionsRollout":false,"isDACRollout":0,"isTBRollout":false},"commonConfig":{"brand":"wix","host":"VIEWER","bsi":"","consentPolicy":{},"consentPolicyHeader":{},"siteRevision":"66","renderingFlow":"NONE","language":"en","locale":"en-us"},"interactionSampleRatio":0.01,"accessTokensUrl":"https:\/\/www.tintboyz.ca\/_api\/v1\/access-tokens","experiments":{"specs.thunderbolt.hardenFetchAndXHR":true,"specs.thunderbolt.securityExperiments":true,"specs.thunderbolt.allowWebpAvifTransforms":true,"specs.thunderbolt.browserCacheReload":true,"specs.thunderbolt.addIdAsClassName":true,"specs.thunderbolt.browserZoomMobileOnloadDetection":true}}</script>
-  <script>window.viewerModel = JSON.parse(document.getElementById('wix-essential-viewer-model').textContent)</script>
-
-  <!-- Globals Definitions -->
-  <script>
-    (function () {
-      var now = Date.now()
-      var activationStart = 0
-      try {
-        var navEntry = performance.getEntriesByType('navigation')[0];
-        if (navEntry && navEntry.activationStart > 0) {
-          activationStart = navEntry.activationStart;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tint Boyz | Custom Automotive Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    }
+                }
+            }
         }
-      } catch (e) {}
-      window.initialTimestamps = {
-        initialTimestamp: now,
-        initialRequestTimestamp: Math.round(performance.timeOrigin ? performance.timeOrigin + activationStart : now - performance.now() + activationStart)
-      }
-
-      window.thunderboltTag = "7be45c1ef913d24a9a976937aa88e130a8c51c7749f5a772f261e759"
-      window.thunderboltVersion = "7be45c1ef913d24a9a976937aa88e130a8c51c7749f5a772f261e759"
-    })();
-  </script>
-
-  <script>
-    window.commonConfig = viewerModel.commonConfig
-  </script>
-
-  <!-- handleAccessTokens bundle -->
-  <script data-url="https://static.parastorage.com/services/wix-thunderbolt/dist/handleAccessTokens.inline.3250797b.bundle.min.js">(()=>{"use strict";let e,t,r,o;var n={},i={};function l(e){var t=i[e];if(void 0!==t)return t.exports;var r=i[e]={exports:{}};return n[e](r,r.exports,l),r.exports}function a(e){let{context:t,property:r,value:o,enumerable:n=!0}=e,i=e.get,l=e.set;if(!r||void 0===o&&!i&&!l)return Error("property and value are required");let a=t||globalThis,s=a?.[r],u={};if(void 0!==o)u.value=o;else{if(i){let e=c(i);e&&(u.get=e)}if(l){let e=c(l);e&&(u.set=e)}}let p={...u,enumerable:n||!1,configurable:!1};void 0!==o&&(p.writable=!1);try{Object.defineProperty(a,r,p)}catch(e){return e instanceof TypeError?s:e}return s}function c(e,t){return"function"==typeof e?e:e?.async===!0&&"function"==typeof e.func?t?async function(t){return e.func(t)}:async function(){return e.func()}:"function"==typeof e?.func?e.func:void 0}l.rv=()=>"1.6.8",l.ruid="bundler=rspack@1.6.8";try{a({property:"strictDefine",value:a})}catch{}try{a({property:"defineStrictObject",value:function e(t){let{context:r,property:o,propertiesToExclude:n=[],skipPrototype:i=!1,hardenPrototypePropertiesToExclude:l=[]}=t;if(!o)return Error("property is required");let c=(r||globalThis)[o],p={},f=u(r,o);c&&("object"==typeof c||"function"==typeof c)&&Reflect.ownKeys(c).forEach(e=>{if(!n.includes(e)&&!s.includes(e)){let t=u(c,e);if(t&&(t.writable||t.configurable)){let{value:r,get:o,set:n,enumerable:i=!1}=t,l={};void 0!==r?l.value=r:o?l.get=o:n&&(l.set=n);try{let t=a({context:c,property:e,...l,enumerable:i});p[e]=t}catch(r){if(r instanceof TypeError)try{p[e]=t.value||t.get||t.set}catch{}else throw r}}}});let d={originalObject:c,originalProperties:p};if(!i&&c?.prototype!==void 0){let t=e({context:c,property:"prototype",propertiesToExclude:l,skipPrototype:!0});t instanceof Error||(d.originalPrototype=t?.originalObject,d.originalPrototypeProperties=t?.originalProperties)}return a({context:r,property:o,value:c,enumerable:f?.enumerable}),d}})}catch{}try{a({property:"defineStrictMethod",value:function(e,t){let r=(t||globalThis)[e],o=u(t||globalThis,e);return r&&o&&(o.writable||o.configurable)?(Object.freeze(r),a({context:globalThis,property:e,value:r})):r}})}catch{}var s=["toString","toLocaleString","valueOf","constructor","prototype"];function u(e,t){if(!(!e||!t))try{return Reflect.getOwnPropertyDescriptor(e,t)}catch{return}}function p(e){if("string"!=typeof e)return e;try{return decodeURIComponent(e).toLowerCase().trim()}catch{return e.toLowerCase().trim()}}function f(e,t){let r="";if("string"==typeof e)r=e.split("=")[0]?.trim()||"";else{if(!e||"string"!=typeof e.name)return!1;r=e.name}return t.has(p(r)||"")}function d(e,t){return("string"==typeof e?e.split(";").map(e=>e.trim()).filter(e=>e.length>0):e||[]).filter(e=>!f(e,t))}var y=null;function g(){return null===y&&(y=typeof Document>"u"?void 0:Object.getOwnPropertyDescriptor(Document.prototype,"cookie")),y}let b=(e,t)=>{try{let r=t?t.get.call(document):document.cookie;return r.split(";").map(e=>e.trim()).filter(t=>t?.startsWith(e))[0]?.split("=")[1]}catch(e){return""}},h=(e="",t="",r="/")=>`${e}=; ${t?`domain=${t};`:""} max-age=0; path=${r}; expires=Thu, 01 Jan 1970 00:00:01 GMT`;function m(e,t){try{return sessionStorage[e]("reload",t||"")}catch(e){console.error("ATS: Error calling sessionStorage:",e)}}var v=["true","b","c","new","enabled"];let w=[],S=(e,t)=>{let r;return w.includes(t)||!0===(r=e[t])||"string"==typeof r&&v.includes(r.toLowerCase())},T="client-session-bind",k="sec-fetch-unsupported",{experiments:x}=window.viewerModel,{cookie:E}=(e=new Set([T,"client-binding",k,"svSession","smSession","server-session-bind","wixSession2","wixSession3"].map(e=>e.toLowerCase())),a({context:document,property:"cookie",set:{func:t=>{var r,o;let n,i;return r=document,o=void 0,n=g(),i=p(t.split(";")[0]||"")||"",void([...e].every(e=>!i.startsWith(e.toLowerCase()))&&n?.set?n.set.call(r,t):o&&console.warn(o))}},get:{func:()=>(function(e,t){let r=g();if(!r?.get)throw Error("Cookie descriptor or getter not available");return d(r.get.call(e),t).join("; ")})(document,e)},enumerable:!0}),{cookieStore:function(e,t){if(!globalThis?.cookieStore)return;let r=globalThis.cookieStore.get.bind(globalThis.cookieStore),o=globalThis.cookieStore.getAll.bind(globalThis.cookieStore),n=globalThis.cookieStore.set.bind(globalThis.cookieStore),i=globalThis.cookieStore.delete.bind(globalThis.cookieStore);return a({context:globalThis.CookieStore.prototype,property:"get",value:async function(t){return f(("string"==typeof t?t:t.name)||"",e)?null:r.call(this,t)},enumerable:!0}),a({context:globalThis.CookieStore.prototype,property:"getAll",value:async function(){let t=await o.apply(this,Array.from(arguments));return d(t,e)},enumerable:!0}),a({context:globalThis.CookieStore.prototype,property:"set",value:async function(){let r=Array.from(arguments);if(!f(1===r.length?r[0].name:r[0],e))return n.apply(this,r);t&&console.warn(t)},enumerable:!0}),a({context:globalThis.CookieStore.prototype,property:"delete",value:async function(){let t=Array.from(arguments);if(!f(1===t.length?t[0].name:t[0],e))return i.apply(this,t)},enumerable:!0}),a({context:globalThis.cookieStore,property:"prototype",value:globalThis.CookieStore.prototype,enumerable:!1}),a({context:globalThis,property:"cookieStore",value:globalThis.cookieStore,enumerable:!0}),{get:r,getAll:o,set:n,delete:i}}(e,void 0),cookie:g()}),P="tbReady",C="security_overrideGlobals",{experiments:D,siteFeaturesConfigs:M,accessTokensUrl:O}=window.viewerModel,$={},j=(t=b(T,E),S(x,"specs.thunderbolt.browserCacheReload")&&(b(k,E)||t?m("removeItem"):function(){if("undefined"!=typeof window){let e=performance.getEntriesByType("navigation")[0];return"back_forward"===(e?.type||"")}return!1}()&&function(){let{counter:e}=function(){let e=m("getItem");if(e){let[t,r]=e.split("-"),o=r?parseInt(r,10):0;if(o>=3){let e=t?Number(t):0;if(Date.now()-e>6e4)return{counter:0}}return{counter:o}}return{counter:0}}();e<3?(function(e=1){m("setItem",`${Date.now()}-${e}`)}(e+1),window.location.reload()):console.error("ATS: Max reload attempts reached")}()),r=h(T),o=h(T,location.hostname),E.set.call(document,r),E.set.call(document,o),t);j&&($["client-binding"]=j);let A=fetch;addEventListener(P,function e(t){let{logger:r}=t.detail;try{window.tb.init({fetch:A,fetchHeaders:$})}catch(t){let e=Error("TB003");r.meter(`${C}_${e.message}`,{paramsOverrides:{errorType:C,eventString:e.message}}),window?.viewerModel?.mode.debug&&console.error(t)}finally{removeEventListener(P,e)}}),S(D,"specs.thunderbolt.hardenFetchAndXHR")||(window.fetchDynamicModel=()=>M.sessionManager.isRunningInDifferentSiteContext?Promise.resolve({}):fetch((()=>{try{let e="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope,t=globalThis?.parent!==globalThis,r=new URL(O,location.href);return(t||e)&&(r.searchParams.set("ifr",String(t)),r.searchParams.set("worker",String(e))),r.href}catch{return O}})(),{credentials:"same-origin",headers:$}).then(function(e){if(!e.ok)throw Error(`[${e.status}]${e.statusText}`);return e.json()}),window.dynamicModelPromise=window.fetchDynamicModel())})();</script>
-
-  <!-- overrideGlobals bundle -->
-  <script data-url="https://static.parastorage.com/services/wix-thunderbolt/dist/overrideGlobals.inline.b271af7d.bundle.min.js">(()=>{"use strict";var e={},t={};function r(o){var n=t[o];if(void 0!==n)return n.exports;var i=t[o]={exports:{}};return e[o](i,i.exports,r),i.exports}function o(e){let{context:t,property:r,value:o,enumerable:i=!0}=e,c=e.get,a=e.set;if(!r||void 0===o&&!c&&!a)return Error("property and value are required");let l=t||globalThis,s=l?.[r],u={};if(void 0!==o)u.value=o;else{if(c){let e=n(c);e&&(u.get=e)}if(a){let e=n(a);e&&(u.set=e)}}let p={...u,enumerable:i||!1,configurable:!1};void 0!==o&&(p.writable=!1);try{Object.defineProperty(l,r,p)}catch(e){return e instanceof TypeError?s:e}return s}function n(e,t){return"function"==typeof e?e:e?.async===!0&&"function"==typeof e.func?t?async function(t){return e.func(t)}:async function(){return e.func()}:"function"==typeof e?.func?e.func:void 0}r.rv=()=>"1.6.8",r.ruid="bundler=rspack@1.6.8";try{o({property:"strictDefine",value:o})}catch{}try{o({property:"defineStrictObject",value:c})}catch{}try{o({property:"defineStrictMethod",value:a})}catch{}var i=["toString","toLocaleString","valueOf","constructor","prototype"];function c(e){let{context:t,property:r,propertiesToExclude:n=[],skipPrototype:a=!1,hardenPrototypePropertiesToExclude:s=[]}=e;if(!r)return Error("property is required");let u=(t||globalThis)[r],p={},f=l(t,r);u&&("object"==typeof u||"function"==typeof u)&&Reflect.ownKeys(u).forEach(e=>{if(!n.includes(e)&&!i.includes(e)){let t=l(u,e);if(t&&(t.writable||t.configurable)){let{value:r,get:n,set:i,enumerable:c=!1}=t,a={};void 0!==r?a.value=r:n?a.get=n:i&&(a.set=i);try{let t=o({context:u,property:e,...a,enumerable:c});p[e]=t}catch(r){if(r instanceof TypeError)try{p[e]=t.value||t.get||t.set}catch{}else throw r}}}});let d={originalObject:u,originalProperties:p};if(!a&&u?.prototype!==void 0){let e=c({context:u,property:"prototype",propertiesToExclude:s,skipPrototype:!0});e instanceof Error||(d.originalPrototype=e?.originalObject,d.originalPrototypeProperties=e?.originalProperties)}return o({context:t,property:r,value:u,enumerable:f?.enumerable}),d}function a(e,t){let r=(t||globalThis)[e],n=l(t||globalThis,e);return r&&n&&(n.writable||n.configurable)?(Object.freeze(r),o({context:globalThis,property:e,value:r})):r}function l(e,t){if(!(!e||!t))try{return Reflect.getOwnPropertyDescriptor(e,t)}catch{return}}function s(e){return e.startsWith("//")&&/(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]/g.test(`${location.protocol}:${e}`)&&(e=`${location.protocol}${e}`),!e.startsWith("http")||new URL(e).hostname===location.hostname}function u(e){if("string"!=typeof e)return e;try{return decodeURIComponent(e).toLowerCase().trim()}catch{return e.toLowerCase().trim()}}function p(e,t){return e instanceof Headers?e.forEach((r,o)=>{f(o,t)||e.delete(o)}):Object.keys(e).forEach(r=>{f(r,t)||delete e[r]}),e}function f(e,t){return!t.has(u(e)||"")}function d(e,t){let r=!0,o=u(function(e){let t,r;if(globalThis.Request&&e instanceof Request)t=e.url;else if("function"==typeof e?.toString)t=e.toString();else throw Error("Unsupported type for url");try{return new URL(t).pathname}catch{return(r=t.replace(/#.+/gi,"").split("?").shift()).startsWith("/")?r:`/${r}`}}(e));return o&&t.some(e=>o.includes(e))&&(r=!1),r}var y=["true","b","c","new","enabled"];let b=[],g=(e,t)=>{let r;return b.includes(t)||!0===(r=e[t])||"string"==typeof r&&y.includes(r.toLowerCase())};performance.mark("overrideGlobals started");let{experiments:m}=window.viewerModel,v=g(m,"specs.thunderbolt.securityExperiments");try{let e,t;!function(){let e=globalThis.open,t=document.open;function r(t,r,o){let n="string"!=typeof t,i=e.call(window,t,r,o);return n||t&&s(t)?{}:i}o({property:"open",value:r,context:globalThis,enumerable:!0}),o({property:"open",value:function(e,o,n){return e?r(e,o,n):t.call(document,e||"",o||"",n||"")},context:document,enumerable:!0})}(),v&&function(){let e=document.createElement,t=Element.prototype.setAttribute,r=Element.prototype.setAttributeNS,n=Element.prototype.removeAttribute,i=(Object.getOwnPropertyDescriptor(HTMLIFrameElement.prototype,"contentWindow")?.get,Object.getOwnPropertyDescriptor(HTMLIFrameElement.prototype,"src")),c=i?.get,a=i?.set,l=Object.getOwnPropertyDescriptor(HTMLIFrameElement.prototype,"sandbox")?.get,s=DOMTokenList.prototype.add,p=DOMTokenList.prototype.remove,f=DOMTokenList.prototype.toggle,d=DOMTokenList.prototype.replace,y=Object.getOwnPropertyDescriptor(DOMTokenList.prototype,"value"),b=y?.get,g=y?.set,m=new WeakSet;o({property:"createElement",context:document,value:function(n,i){let c=e.call(document,n,i);return"iframe"===u(n)&&(o({property:"srcdoc",context:c,get:()=>"",set:()=>{console.warn("`srcdoc` is not allowed in iframe elements.")}}),o({property:"setAttribute",context:c,value:function(e,r){if("srcdoc"===e.toLowerCase())return void console.warn("`srcdoc` attribute is not allowed to be set.");t.call(c,e,r);e.toLowerCase()},enumerable:!1}),o({property:"setAttributeNS",context:c,value:function(e,t,o){if("srcdoc"===t.toLowerCase())return void console.warn("`srcdoc` attribute is not allowed to be set.");r.call(c,e,t,o);t.toLowerCase()},enumerable:!1})),c},enumerable:!0})}(),g(m,"specs.thunderbolt.hardenFetchAndXHR")&&v&&function(e,t,r){let n=fetch,i=XMLHttpRequest,c=new Set(t);function a(){let t=new i,o=t.open,n=t.setRequestHeader;return t.open=function(){let n=Array.from(arguments),i=n[1];if(n.length<2||d(i,e))return o.apply(t,n);throw Error(r||`Request not allowed for path ${i}`)},t.setRequestHeader=function(e,r){f(decodeURIComponent(e),c)&&n.call(t,e,r)},t}o({property:"fetch",value:function(){var t;let o=(t=arguments,globalThis.Request&&t[0]instanceof Request&&t[0]?.headers?p(t[0].headers,c):t[1]?.headers&&p(t[1].headers,c),t);return d(arguments[0],e)?n.apply(globalThis,Array.from(o)):new Promise((e,t)=>{let o=Error(r||`Request not allowed for path ${arguments[0]}`);t(o)})},enumerable:!0}),o({property:"XMLHttpRequest",value:a,enumerable:!0}),Object.keys(i).forEach(e=>{a[e]=i[e]})}(["/_api/v1/access-tokens","/_api/v2/dynamicmodel","/_api/one-app-session-web/v3/businesses"],["client-binding"]),function(){if(navigator&&"serviceWorker"in navigator)navigator.serviceWorker.register,o({context:navigator.serviceWorker,property:"register",value:function(){console.log("Service worker registration is not allowed")},enumerable:!0})}(),e=[],t=(t=[]).concat(["TextEncoder","TextDecoder"]),v&&(t=t.concat(["XMLHttpRequestEventTarget","EventTarget"])),t=t.concat(["URL","JSON"]),v&&(e=e.concat(["addEventListener","removeEventListener"])),e=e.concat(["encodeURI","encodeURIComponent","decodeURI","decodeURIComponent"]),t=t.concat(["String","Number"]),v&&t.push("Object"),t=t.concat(["Reflect"]),e.forEach(e=>{a(e),["addEventListener","removeEventListener"].includes(e)&&a(e,document)}),t.forEach(e=>{c({property:e})}),v&&function(){return e("setTimeout",0,globalThis),e("setInterval",0,globalThis);function e(e,t,r){let n=r||globalThis,i=n[e];if(!i||"function"!=typeof i)throw Error(`Function ${e} not found or is not a function`);o({property:e,value:function(){let r=Array.from(arguments);if("string"!=typeof r[t])return i.apply(n,r);console.warn(`Calling ${e} with a String Argument at index ${t} is not allowed`)},context:r,enumerable:!0})}}()}catch(t){window?.viewerModel?.mode.debug&&console.error(t);let e=Error("TB006");window.fedops?.reportError(e,"security_overrideGlobals"),window.Sentry?window.Sentry.captureException(e):globalThis.defineStrictProperty("sentryBuffer",[e],window,!1)}performance.mark("overrideGlobals ended")})();</script>
-
-  <!-- Custom CSS matching the brand images provided -->
-  <style>
-    :root {
-      --brand-blue: #003087;
-      --brand-red: #D50000;
-      --text-dark: #001A4E;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: #ffffff;
-      color: var(--text-dark);
-      font-family: Arial, Helvetica, sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-    }
-
-    /* Top Left Slash Accents */
-    .top-left-slashes {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 260px;
-      height: 180px;
-      overflow: hidden;
-      pointer-events: none;
-      z-index: 5;
-    }
-    .top-left-slashes::before {
-      content: "";
-      position: absolute;
-      top: -60px;
-      left: -80px;
-      width: 140px;
-      height: 300px;
-      background: var(--brand-blue);
-      transform: rotate(35deg);
-    }
-
-    /* Bottom Right Slash Accents */
-    .bottom-right-slashes {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 320px;
-      height: 280px;
-      overflow: hidden;
-      pointer-events: none;
-      z-index: 5;
-    }
-    .bottom-right-slashes::before {
-      content: "";
-      position: absolute;
-      bottom: -40px;
-      right: -80px;
-      width: 180px;
-      height: 400px;
-      background: var(--brand-blue);
-      transform: rotate(35deg);
-    }
-
-    /* Main Branding Header Container */
-    .brand-header {
-      text-align: center;
-      padding: 25px 10px 15px;
-      position: relative;
-      z-index: 10;
-    }
-    .brand-title {
-      color: var(--brand-red);
-      font-weight: 900;
-      font-style: italic;
-      font-size: 36px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      line-height: 1.1;
-    }
-    .brand-subtitle {
-      color: var(--brand-blue);
-      font-weight: bold;
-      font-style: italic;
-      font-size: 18px;
-      margin-top: 4px;
-    }
-
-    /* Full-width Red Banner bar */
-    .red-banner-line {
-      height: 10px;
-      background-color: var(--brand-red);
-      width: 100%;
-      margin-bottom: 40px;
-      position: relative;
-      z-index: 4;
-    }
-
-    /* Content Area */
-    .main-content {
-      flex: 1;
-      max-width: 900px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 0 20px 60px;
-      text-align: center;
-      position: relative;
-      z-index: 10;
-    }
-
-    /* Zebra / Striped Section Divider */
-    .striped-divider {
-      height: 18px;
-      background: repeating-linear-gradient(
-        -45deg,
-        var(--brand-blue),
-        var(--brand-blue) 4px,
-        transparent 4px,
-        transparent 12px
-      );
-      width: 100%;
-      margin: 25px 0;
-    }
-
-    /* Center Alert Box */
-    .maintenance-message {
-      font-size: 22px;
-      font-weight: bold;
-      color: var(--brand-red);
-      margin: 30px 0;
-      line-height: 1.4;
-    }
-
-    /* Horizontal Section Title Layout */
-    .section-title-wrap {
-      display: inline-block;
-      background-color: var(--brand-blue);
-      color: #fff;
-      padding: 6px 30px;
-      font-weight: bold;
-      font-size: 16px;
-      margin-bottom: 30px;
-      box-shadow: -4px 4px 0px var(--brand-red);
-    }
-
-    /* Contact Block Styling */
-    .contact-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-      text-align: left;
-      margin-top: 20px;
-    }
-
-    /* Red highlight card layout for address info */
-    .address-highlight-box {
-      background-color: var(--brand-red);
-      color: #ffffff;
-      padding: 25px;
-      border-radius: 2px;
-    }
-    .address-header {
-      font-weight: bold;
-      font-size: 15px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 12px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      padding-bottom: 6px;
-    }
-    .address-text {
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    /* Clean structural grid for standard communication items */
-    .info-group {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-      padding-left: 10px;
-    }
-    .info-item {
-      display: flex;
-      flex-direction: column;
-    }
-    .info-header {
-      color: var(--brand-red);
-      font-size: 20px;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 6px;
-    }
-    .info-star {
-      color: var(--brand-blue);
-      font-size: 22px;
-      line-height: 1;
-    }
-    .info-value {
-      font-size: 16px;
-      color: var(--brand-blue);
-      font-weight: 500;
-    }
-    .info-value a {
-      color: var(--brand-blue);
-      text-decoration: none;
-    }
-    .info-value a:hover {
-      text-decoration: underline;
-    }
-
-    /* Footer Credits styling */
-    .footer-credits {
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 11px;
-      color: var(--brand-blue);
-      font-weight: bold;
-      position: relative;
-      z-index: 10;
-      border-top: 1px solid #eeeeee;
-      width: 100%;
-    }
-
-    @media (max-width: 600px) {
-      .top-left-slashes, .bottom-right-slashes {
-        display: none;
-      }
-      .brand-title {
-        font-size: 28px;
-      }
-      .maintenance-message {
-        font-size: 18px;
-      }
-    }
-  </style>
+    </script>
 </head>
-<body>
+<body class="bg-[#faf8f5] text-[#1c1d1f] font-sans selection:bg-[#c82312] selection:text-white">
 
-  <!-- Diagonal Theme Edge Accents -->
-  <div class="top-left-slashes"></div>
-  <div class="bottom-right-slashes"></div>
-
-  <!-- Main Website Branding -->
-  <div class="brand-header">
-    <div class="brand-title">Tint Boyz</div>
-    <div class="brand-subtitle">Custom Auto</div>
-  </div>
-
-  <!-- Accent Divider Layout Line -->
-  <div class="red-banner-line"></div>
-
-  <!-- Core Content Layout -->
-  <div class="main-content">
-    
-    <div class="striped-divider"></div>
-    
-    <!-- User Requested Maintenance Message -->
-    <div class="maintenance-message">
-      This website is undergoing maintence currently
-    </div>
-    
-    <div class="striped-divider"></div>
-
-    <div class="section-title-wrap">
-      Hours & Locations
-    </div>
-
-    <!-- Info & Contact Details -->
-    <div class="contact-container">
-      
-      <!-- Styled Red Location block matching the visual reference -->
-      <div class="address-highlight-box">
-        <div class="address-header">
-          <span style="color:#fff;">★</span> ADDRESS <span style="color:#fff;">★</span>
+    <header class="border-b border-[#1c1d1f]/10 bg-[#faf8f5]/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex flex-col">
+                <span class="font-display font-bold text-2xl tracking-tight text-[#c82312] italic">TINT BOYZ</span>
+                <span class="text-[10px] tracking-widest uppercase font-bold text-[#1c1d1f]/60 -mt-1">Custom Auto</span>
+            </div>
+            <a href="#contact" class="bg-[#1c1d1f] hover:bg-[#c82312] text-[#faf8f5] px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-200">
+                Book a Slot
+            </a>
         </div>
-        <div class="address-text">
-          2345 Barton Street East<br>
-          Hamilton, ON<br>
-          L8E 2W8
-        </div>
+    </header>
+
+    <section class="relative bg-[#1c1d1f] text-[#faf8f5] py-24 md:py-36 overflow-hidden border-b-4 border-[#c82312]">
+        <div class="absolute inset-0 bg-gradient-to-tr from-[#1c1d1f] via-[#1c1d1f]/95 to-amber-500/10 z-0"></div>
         
-        <div class="address-header" style="margin-top: 20px;">
-          <span style="color:#fff;">★</span> REGION <span style="color:#fff;">★</span>
-        </div>
-        <div class="address-text">
-          Lincoln, Ontario, Canada
-        </div>
-      </div>
+        <div class="max-w-6xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-flex items-center gap-2 border border-[#faf8f5]/20 bg-[#faf8f5]/5 px-3 py-1 text-xs font-semibold tracking-wider uppercase">
+                    <span class="w-2 h-2 rounded-full bg-[#c82312]"></span> Hamilton & Niagara's Finest
+                </div>
+                <h1 class="font-display font-bold text-5xl md:text-6xl tracking-tight uppercase leading-none">
+                    RIDE IN <br><span class="text-[#c82312] italic">COMFORT</span>
+                </h1>
+                <p class="text-lg text-[#faf8f5]/80 max-w-md">
+                    Premium window tinting, detailing, and custom auto accessories. Craftsmanship and respect built on over 35 years of being the best Niagara has to offer!
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#services" class="bg-[#c82312] hover:bg-red-700 text-white px-6 py-3 font-bold uppercase text-xs tracking-widest transition-colors">
+                        View Pricing
+                    </a>
+                    <a href="#contact" class="border border-[#faf8f5]/30 hover:border-[#faf8f5] px-6 py-3 font-bold uppercase text-xs tracking-widest transition-colors">
+                        Call the Shop
+                    </a>
+                </div>
+            </div>
 
-      <!-- Styled Mail and Phone Elements matching the footer elements -->
-      <div class="info-group">
+            <div class="relative flex justify-center">
+                <div class="w-full h-80 bg-neutral-800 border border-[#faf8f5]/10 flex items-center justify-center relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://raw.githubusercontent.com/Persaud-Airlines/TintBoyz-CustomAuto/refs/heads/main/splash.webp');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1c1d1f] via-transparent to-transparent"></div>
+                    <span class="absolute bottom-4 left-4 text-xs font-mono text-[#faf8f5]/50">// Golden Hour at the Shop</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-white border-b border-[#1c1d1f]/5">
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-4">
+            <h2 class="font-display font-bold text-xs uppercase tracking-widest text-[#c82312]">ESTABLISHED 1991</h2>
+            <p class="font-display text-2xl md:text-3xl text-[#1c1d1f] font-bold leading-relaxed">
+                "With over 35 years of experience, we deliver the best automotive specialty services and professional window tinting money can buy."
+            </p>
+            <div class="w-12 h-1 bg-[#1c1d1f] mx-auto mt-6"></div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-[#c82312]">Pricing</span>
+                <h2 class="font-display font-bold text-4xl uppercase tracking-tight mt-1">Services & Rates</h2>
+            </div>
+            <p class="text-sm text-[#1c1d1f]/60 max-w-xs">
+                No hidden fees. Just clean, lifetime-warranted work completed by professionals who love cars as much as you do.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white border border-[#1c1d1f]/10 p-8 flex flex-col justify-between hover:border-[#c82312] transition-colors duration-300">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                        <span class="font-display font-bold text-xl uppercase tracking-tight">2-Door Coupe / Truck</span>
+                        <span class="font-display font-bold text-3xl text-[#c82312]">$99<span class="text-xs text-neutral-500 font-normal"> / start</span></span>
+                    </div>
+                    <div class="inline-block bg-emerald-100 text-emerald-800 text-[10px] uppercase font-bold tracking-wider px-2 py-1">
+                        Lifetime Warranty Included
+                    </div>
+                    <p class="text-sm text-[#1c1d1f]/70">
+                        Perfect match tinting designed to block UV rays, lower cabin temperature, and give your ride a sharp look.
+                    </p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-[#1c1d1f]/5 flex justify-between items-center text-xs font-bold uppercase tracking-wider text-[#1c1d1f]/60">
+                    <span>Shades: Various Available</span>
+                    <a href="#contact" class="text-[#c82312] hover:underline">Book Coupe →</a>
+                </div>
+            </div>
+
+            <div class="bg-white border border-[#1c1d1f]/10 p-8 flex flex-col justify-between hover:border-[#c82312] transition-colors duration-300">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                        <span class="font-display font-bold text-xl uppercase tracking-tight">4-Door Sedan / SUV</span>
+                        <span class="font-display font-bold text-3xl text-[#c82312]">$149<span class="text-xs text-neutral-500 font-normal"> / start</span></span>
+                    </div>
+                    <div class="inline-block bg-emerald-100 text-emerald-800 text-[10px] uppercase font-bold tracking-wider px-2 py-1">
+                        Lifetime Warranty Included
+                    </div>
+                    <p class="text-sm text-[#1c1d1f]/70">
+                        Full wrap tinting designed for maximum privacy and heat rejection. Tailored to suit your vehicle's specific glass curves.
+                    </p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-[#1c1d1f]/5 flex justify-between items-center text-xs font-bold uppercase tracking-wider text-[#1c1d1f]/60">
+                    <span>Specialty Graphic Films Available</span>
+                    <a href="#contact" class="text-[#c82312] hover:underline">Book Sedan →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 bg-[#1c1d1f] text-[#faf8f5] p-8 md:p-12 border-l-4 border-[#c82312] flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div class="space-y-2">
+                <h3 class="font-display font-bold text-lg uppercase tracking-wider">Need more than tinting?</h3>
+                <p class="text-xs text-[#faf8f5]/60 max-w-lg">
+                    We also offer professional <span class="text-white font-semibold">Car Detailing</span>, custom <span class="text-white font-semibold">Interior Designs</span>, high-fidelity <span class="text-white font-semibold">Audio Systems</span>, <span class="text-white font-semibold">Car Alarms & Remote Starters</span> (starting at $85), and custom body skirts.
+                </p>
+            </div>
+            <a href="tel:9059718468" class="bg-[#faf8f5] hover:bg-[#c82312] text-[#1c1d1f] hover:text-[#faf8f5] px-6 py-3 font-bold uppercase text-xs tracking-widest transition-colors whitespace-nowrap">
+                Call for Custom Quote
+            </a>
+        </div>
+    </section>
+
+    <section id="gallery" class="bg-neutral-100 py-24 border-t border-b border-[#1c1d1f]/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#c82312]">The Portfolio</span>
+                <h2 class="font-display font-bold text-4xl uppercase tracking-tight mt-1">Roll Out</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                
+                <div class="aspect-square bg-neutral-200 border border-neutral-300 relative overflow-hidden group">
+                    <img src="https://github.com/Persaud-Airlines/TintBoyz-CustomAuto/blob/main/p1.jpg?raw=true" alt="Tint Boyz Custom Work" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+
+                <div class="aspect-square bg-neutral-200 border border-neutral-300 relative overflow-hidden group">
+                    <img src="https://github.com/Persaud-Airlines/TintBoyz-CustomAuto/blob/main/p2.jpg?raw=true" alt="Tint Boyz Custom Work" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+
+                <div class="aspect-square bg-neutral-200 border border-neutral-300 relative overflow-hidden group">
+                    <img src="https://github.com/Persaud-Airlines/TintBoyz-CustomAuto/blob/main/p3.jpg?raw=true" alt="Tint Boyz Custom Work" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+
+                <div class="aspect-square bg-neutral-200 border border-neutral-300 relative overflow-hidden group">
+                    <img src="https://github.com/Persaud-Airlines/TintBoyz-CustomAuto/blob/main/p4.jpg?raw=true" alt="Tint Boyz Custom Work" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+
+            </div>
+    <section class="bg-[#c82312] text-white py-8 relative overflow-hidden border-y-4 border-[#1c1d1f]">
+        <div class="absolute inset-0 opacity-10 bg-[linear-gradient(45deg,#000_25%,transparent_25%,transparent_50%,#000_50%,#000_75%,transparent_75%,transparent)] bg-[length:30px_30px]"></div>
         
-        <!-- Mail Block -->
-        <div class="info-item">
-          <div class="info-header">
-            <span class="info-star">★</span> Mail
-          </div>
-          <div class="info-value">
-            <a href="mailto:tintboyzcustomauto@gmail.com">tintboyzcustomauto@gmail.com</a>
-          </div>
+        <div class="max-w-6xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-4 text-center md:text-left">
+                <h3 class="font-display font-black text-2xl md:text-4xl italic tracking-tighter uppercase leading-none">
+                    SEE MORE AWESOMENESS <br class="hidden md:inline">
+                    <span class="text-[#1c1d1f] not-italic font-bold text-lg md:text-2xl tracking-normal">ON OUR INSTAGRAM</span>
+                </h3>
+            </div>
+            
+            <a href="https://www.instagram.com/tintboyzcustom/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-[#1c1d1f] hover:bg-white hover:text-[#1c1d1f] text-white px-8 py-4 font-display font-bold uppercase text-xs tracking-widest italic transition-all duration-300 border-2 border-[#1c1d1f] shadow-md group shrink-0">
+                <svg class="w-5 h-5 fill-current transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+                Follow @TintBoyz
+            </a>
+        </div>
+    </section>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+        <div class="space-y-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-[#c82312]">Visit the Shop</span>
+                <h2 class="font-display font-bold text-4xl uppercase tracking-tight mt-1">Hamilton Garage</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="flex items-start gap-4">
+                    <div class="bg-[#1c1d1f] text-[#faf8f5] p-2 text-xs font-bold uppercase tracking-widest">LOC</div>
+                    <div>
+                        <p class="font-bold text-md">Tint Boyz Custom Auto</p>
+                        <p class="text-sm text-neutral-600">2345 Barton Street East</p>
+                        <p class="text-sm text-neutral-600">Hamilton, ON L8E 2W8</p>
+                        <p class="text-xs text-[#c82312] mt-1">Serving Hamilton, Niagara Region & Surrounding Areas. </p>
+                        <p class="text-xs text-[#c82312] mt-1">Now offering mobile tinting services. </p>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="bg-[#1c1d1f] text-[#faf8f5] p-2 text-xs font-bold uppercase tracking-widest">HRS</div>
+                    <div class="text-sm text-neutral-600 space-y-1">
+                        <p><span class="font-bold text-[#1c1d1f]">Mon - Tue:</span> 9:30 AM - 4:00 PM</p>
+                        <p><span class="font-bold text-[#1c1d1f]">Wed - Fri:</span> 9:30 AM - 5:00 PM</p>
+                        <p><span class="font-bold text-[#1c1d1f]">Sat:</span> 10:00 AM - 3:00 PM</p>
+                        <p class="text-xs text-amber-600 font-medium">Closed Sundays</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-[#1c1d1f]/10 space-y-2">
+                <p class="text-xs font-semibold text-neutral-400 uppercase tracking-widest">Direct Lines</p>
+                <p class="text-lg font-bold"><a href="tel:9059718468" class="hover:text-[#c82312]">📞 905-971-8468</a></p>
+                <p class="text-sm"><a href="mailto:tintboyzcustomauto@gmail.com" class="text-neutral-600 hover:text-[#c82312]">✉️ tintboyzcustomauto@gmail.com</a></p>
+            </div>
         </div>
 
-        <!-- Phone Block -->
-        <div class="info-item">
-          <div class="info-header">
-            <span class="info-star">★</span> Phone
-          </div>
-          <div class="info-value">
-            <a href="tel:9059718468">905-971-8468</a>
-          </div>
+        <div class="bg-white border border-[#1c1d1f]/10 p-8 md:p-10 shadow-sm">
+            <h3 class="font-display font-bold text-xl uppercase tracking-tight mb-6">Drop a Message</h3>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                
+                <input type="hidden" name="access_key" value="8166dfda-2eb7-4f83-ae0c-b946c1bd19ca">
+                
+                <input type="hidden" name="subject" value="[AUTOMATED] Client Inquiry for TintBoyz Custom Automotive Services">
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider mb-2 text-[#1c1d1f]/70">Your Name *</label>
+                    <input type="text" name="name" required class="w-full bg-[#faf8f5] border border-neutral-200 focus:border-[#c82312] focus:ring-1 focus:ring-[#c82312] px-4 py-3 text-sm transition-all outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider mb-2 text-[#1c1d1f]/70">Email Address *</label>
+                    <input type="email" name="email" required class="w-full bg-[#faf8f5] border border-neutral-200 focus:border-[#c82312] focus:ring-1 focus:ring-[#c82312] px-4 py-3 text-sm transition-all outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider mb-2 text-[#1c1d1f]/70">Vehicle Year, Make & Model</label>
+                    <input type="text" name="vehicle" placeholder="e.g., 2024 Honda Civic" class="w-full bg-[#faf8f5] border border-neutral-200 focus:border-[#c82312] focus:ring-1 focus:ring-[#c82312] px-4 py-3 text-sm transition-all outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider mb-2 text-[#1c1d1f]/70">Message / Service Needed *</label>
+                    <textarea name="message" rows="4" required placeholder="What are we booking you in for?" class="w-full bg-[#faf8f5] border border-neutral-200 focus:border-[#c82312] focus:ring-1 focus:ring-[#c82312] px-4 py-3 text-sm transition-all outline-none resize-none"></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-[#1c1d1f] hover:bg-[#c82312] text-[#faf8f5] py-4 text-xs font-bold uppercase tracking-widest transition-colors duration-200">
+                    Send Inquiry
+                </button>
+            </form>
         </div>
+    </section>
 
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- Copyright Footer line -->
-  <div class="footer-credits">
-    © 2026 BY TINTBOYZ
-  </div>
+    <footer class="bg-[#1c1d1f] text-[#faf8f5]/60 text-xs py-12 border-t-4 border-[#c82312]">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Tint Boyz Custom Auto. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#about" class="hover:text-white transition-colors">Our Story</a>
+                <a href="#services" class="hover:text-white transition-colors">Services</a>
+                <a href="https://www.google.ca/maps/place/Tint+Boyz+Cuztom+Auto/@43.2386646,-79.7658818,18.86z/data=!4m16!1m9!3m8!1s0x882c98c1adf0939b:0x751e637c025f003d!2sTint+Boyz+Cuztom+Auto!8m2!3d43.2385503!4d-79.7656253!9m1!1b1!16s%2Fg%2F11b70ghgf7!3m5!1s0x882c98c1adf0939b:0x751e637c025f003d!8m2!3d43.2385503!4d-79.7656253!16s%2Fg%2F11b70ghgf7?entry=ttu&g_ep=EgoyMDI2MDcxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="hover:text-[#c82312] text-white transition-colors font-bold">Leave a Google Review ★★★★★</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
