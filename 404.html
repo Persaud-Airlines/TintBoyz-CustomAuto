@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #faf8f5;
+            color: #1c1d1f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .loader {
+            text-align: center;
+        }
+        .spinner {
+            border: 4px solid rgba(28, 29, 31, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border-left-color: #c82312;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px auto;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+    
+    <script>
+        // Get the broken path they tried to visit (e.g., "/gallery")
+        const path = window.location.pathname.toLowerCase();
+        const domain = window.location.origin;
+
+        // Smart-routing: Map old Wix URLs to your new single-page sections
+        if (path.includes('gallery')) {
+            window.location.replace(domain + '/#gallery');
+        } else if (path.includes('service') || path.includes('pricing')) {
+            window.location.replace(domain + '/#services');
+        } else if (path.includes('info') || path.includes('about') || path.includes('contact')) {
+            window.location.replace(domain + '/#contact');
+        } else {
+            // If they typed something completely random, just send them to the main home page
+            window.location.replace(domain + '/');
+        }
+    </script>
+</head>
+<body>
+    <div class="loader">
+        <div class="spinner"></div>
+        <p style="font-weight: 600;">Redirecting you to the new Tint Boyz website...</p>
+    </div>
+</body>
+</html>
